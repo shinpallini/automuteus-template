@@ -1,1 +1,3 @@
 # automuteus-template
+
+このテンプレートはGCPのCompute Engine上のLinuxでAutomuteusを実行するために必要なファイル群です。
