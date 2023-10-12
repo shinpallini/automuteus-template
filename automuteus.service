@@ -1,0 +1,14 @@
+[Unit]
+Description=AutoMuteUs
+
+[Service]
+EnvironmentFile=/home/shinaoyama025/automuteus/.env
+ExecStart=/usr/local/lib/docker/cli-plugins/docker-compose -p automuteus -f /home/shinaoyama025/automuteus/docker-compose.yml up
+ExecStop=/usr/local/lib/docker/cli-plugins/docker-compose -p automuteus -f /home/shinaoyama025/automuteus/docker-compose.yml down
+ExecReload=/usr/local/lib/docker/cli-plugins/docker-compose -p automuteus -f /home/shinaoyama025/automuteus/docker-compose.yml restart
+Restart=always
+
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
